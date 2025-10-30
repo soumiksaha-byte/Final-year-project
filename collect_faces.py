@@ -5,8 +5,8 @@ from insightface.app import FaceAnalysis
 # -------------------------------
 # Configuration
 # -------------------------------
-person_id = input("Enter your university ID: ").strip()
-person_name = input("Enter your full name: ").strip()
+person_id = input("Enter your university ID and Name(univid_name): ").strip()
+
 output_dir = os.path.join("TrainingImage", person_id)
 os.makedirs(output_dir, exist_ok=True)
 
@@ -61,7 +61,7 @@ while True:
 
     cv2.imshow("Capture Faces - InsightFace", frame)
 
-    # Stop on keypress or target reached
+     # Stop on keypress or target reached
     if cv2.waitKey(1) & 0xFF == ord('q'):
         print("🛑 Exiting early.")
         break
