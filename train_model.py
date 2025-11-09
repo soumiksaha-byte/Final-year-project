@@ -7,7 +7,7 @@ from insightface.app import FaceAnalysis
 # -------------------------------
 # Take user input for folder name
 # -------------------------------
-person_id = input("Enter the name to train (e.g., 12345): ").strip()
+person_id = input("Enter the name to train: ").strip()
 dataset_dir = os.path.join("TrainingImage", person_id)
 
 if not os.path.exists(dataset_dir):
@@ -67,3 +67,4 @@ with open(embed_file, "wb") as f:
     pickle.dump({"embeddings": embeddings, "names": names}, f)
 
 print(f"✅ Training complete for {person_id}!")
+
